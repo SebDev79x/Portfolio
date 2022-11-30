@@ -8,12 +8,12 @@ export const allMenuLinks:IMenu[] = [
 },
 {
   link:'portfolio',
-  icon:'person',
+  icon:'code',
   label:'Portfolio'
 },
 {
   link:'skills',
-  icon:'code',
+  icon:'person',
   label:'Compétences'
 },
 {

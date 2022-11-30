@@ -1,11 +1,11 @@
 
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+<div class="sidenav" (click)="toggleSN()" (mouseleave)="onMouseLeave()" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
 <div class="container-logo">
 <!--   <img src="../../assets/img/logo2.png" alt="">
  -->
 </div>
   <div class="logo-container">
-    <img  class="logo" src="../../assets/img/logo2.png" (click)="toggleSN()" alt="Logo internet">
+    <img  class="logo" src="../../assets/img/logo2.png"  alt="Logo internet">
 
 <!--     <button class="logo" (click)="toggleSN()">A</button>
  -->    <div class="logo-text color-white" *ngIf="collapsed">Angular</div>

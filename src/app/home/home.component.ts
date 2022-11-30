@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faSmileBeam } from '@fortawesome/free-regular-svg-icons';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,8 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-   textAnim = document.querySelector('.contentJob h1')
-
+  public smileyIcon = faSmileBeam;
   ngOnInit(): void {
   }
 

@@ -31,20 +31,25 @@ export class SidenavComponent implements OnInit {
     if (this.screenWidth <= 768) {
       this.collapsed = false;
       this.onToggleSN.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth })
-
     }
   }
   ngOnInit(): void {
     this.screenWidth = window.innerWidth
+  }
+  onToggleSNEmitsNewProps(){
+    this.onToggleSN.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth })
 
   }
   toggleSN(): void {
     this.collapsed = !this.collapsed
-    this.onToggleSN.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth })
+    this.onToggleSNEmitsNewProps()
   }
   closeSN(): void {
     this.collapsed = false
-    this.onToggleSN.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth })
+    this.onToggleSNEmitsNewProps()
   }
-
+  onMouseLeave() {
+    this.collapsed = false
+    this.onToggleSNEmitsNewProps()
+}
 }

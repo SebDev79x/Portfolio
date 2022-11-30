@@ -6,3 +6,9 @@ npm i @fortawesome/angular-fontawesome
 npm i @fortawesome/fontawesome-free
 Ajout dans angular.json pour éviter warning Angular CLI: "allowedCommonJsDependencies": [
               "typed.js"
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-brands-svg-icons
+npm install @fortawesome/free-regular-svg-icons
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/angular-fontawesome
+  npm i angular-responsive-carousel
