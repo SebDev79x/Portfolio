@@ -1,0 +1,9 @@
+<mat-toolbar class="bg-color-dark">
+  <a href=""><img src="../../assets/img/logo2.png" alt="Logo internet"></a>
+  <a *ngFor="let data of allMenuLinks" [routerLink]="[data.link]" routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact:true}">
+    <mat-icon class="color-white">{{data.icon}}</mat-icon>
+
+  </a>
+
+</mat-toolbar>

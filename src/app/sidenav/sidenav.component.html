@@ -1,0 +1,28 @@
+
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+<div class="container-logo">
+<!--   <img src="../../assets/img/logo2.png" alt="">
+ -->
+</div>
+  <div class="logo-container">
+    <img  class="logo" src="../../assets/img/logo2.png" (click)="toggleSN()" alt="Logo internet">
+
+<!--     <button class="logo" (click)="toggleSN()">A</button>
+ -->    <div class="logo-text color-white" *ngIf="collapsed">Angular</div>
+
+    <button @rotate class="btn-close" *ngIf="collapsed" (click)="closeSN()">
+      <mat-icon class="matIconClose">close</mat-icon>
+    </button>
+  </div>
+
+  <ul class="sidenav-nav">
+
+    <li class="sidenav-nav-item" *ngFor="let data of allMenuLinks">
+      <a class="sidenav-nav-link color-white" [routerLink]="[data.link]" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:true}">
+           <mat-icon class="sidenav-link-icon">{{data.icon}}</mat-icon>
+        <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
+      </a>
+    </li>
+  </ul>
+</div>

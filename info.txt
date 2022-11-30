@@ -1,0 +1,8 @@
+npm install ngx-cookie-service
+npm i ngx-typed-js
+ng add @angular/material
+npm install @angular/animations@latest --save
+npm i @fortawesome/angular-fontawesome
+npm i @fortawesome/fontawesome-free
+Ajout dans angular.json pour éviter warning Angular CLI: "allowedCommonJsDependencies": [
+              "typed.js"

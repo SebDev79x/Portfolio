@@ -1,0 +1,41 @@
+<section class="portfolio component">
+  <div class="title">
+    <h1>Projets personnels :</h1>
+  </div>
+  <div class="grid-container">
+    <div class="grid-item item{{project.id}}" *ngFor="let project of projects">
+      <mat-accordion class="example-headers-align" multi>
+        <!-- #enddocregion multi -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Projet {{project.id}}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{project.title}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-card class="bg-color-dark">
+
+            <!--        <mat-card-subtitle>
+              {{project.subtitle}}
+            </mat-card-subtitle> -->
+            <div class="matCardFirstBlock">
+              <img [src]="project.imageUrl" alt="" mat-card-image>
+              <mat-card-content>
+                {{project.comment}}
+              </mat-card-content>
+            </div>
+
+            <div class="matCardSecondBlock">
+              <mat-card-actions>
+                <button class="moreInfos" mat-raised-button>+ d'infos</button>
+              </mat-card-actions>
+            </div>
+
+          </mat-card>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</section>
