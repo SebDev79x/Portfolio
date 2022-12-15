@@ -5,8 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { SkillsComponent } from './skills/skills.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TechnosComponent } from './technos/technos.component';
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
     path: 'portfolio', component: PortfolioComponent
   },
   {
-    path: 'skills', component: SkillsComponent
+    path: 'technos', component: TechnosComponent
   },
   {
     path: 'contact', component: ContactComponent

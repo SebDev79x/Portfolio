@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
@@ -18,9 +18,12 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SkillsComponent } from './skills/skills.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatChipsModule } from '@angular/material/chips';
+import {MatDividerModule} from '@angular/material/divider';
+import { TechnosComponent } from './technos/technos.component';
+import { TechnoCardComponent } from './techno-card/techno-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +36,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PrivacyComponent,
     SidenavComponent,
     ExperienceComponent,
-    SkillsComponent,
     PageNotFoundComponent,
+    TechnosComponent,
+    TechnoCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatButtonModule,
     MatCardModule,
     FontAwesomeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatChipsModule,
+    MatDividerModule
 
   ],
   providers: [],

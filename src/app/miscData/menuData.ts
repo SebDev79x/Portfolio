@@ -8,13 +8,13 @@ export const allMenuLinks:IMenu[] = [
 },
 {
   link:'portfolio',
-  icon:'code',
+  icon:'person',
   label:'Portfolio'
 },
 {
-  link:'skills',
-  icon:'person',
-  label:'Compétences'
+  link:'technos',
+  icon:'code',
+  label:'Techs'
 },
 {
   link:'experience',
