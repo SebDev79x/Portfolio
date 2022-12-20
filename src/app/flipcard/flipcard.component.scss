@@ -1,0 +1,50 @@
+.container{
+  display: block;
+ position: relative;
+  height:500px;
+  width:300px;
+  background: grey;
+  perspective: 800px;
+  border-radius: 20px;
+}
+.card{
+  height:100%;
+  width:100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.82, 0.32, 1.275);
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0, 0.15);
+  box-sizing: border-box;
+}
+.card .front, .card .back{
+  position: absolute;
+  width:100%;
+  height:100%;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  background-color: aquamarine;
+  color:#fff;
+  display: grid;
+  place-items: center;
+}
+.back{
+  transform: rotateY(180deg);
+}
+.flipped{
+  transform: rotateY(180deg);
+
+}
+.icon{
+  position: absolute;
+right:5px;
+bottom:5px;
+opacity: 1;
+width:25px;
+height:25px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid blue;
+}

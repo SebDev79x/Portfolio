@@ -7,6 +7,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TechnosComponent } from './technos/technos.component';
+import { FlipcardComponent } from './flipcard/flipcard.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'privacy', component: PrivacyComponent
+  },
+  {
+    path: 'flipcard', component:FlipcardComponent
   },
   {
     path: '**', component: PageNotFoundComponent

@@ -35,3 +35,18 @@ body {
     }
   }
 
+  .mat-mdc-card-header, mat-mdc-card-header-text,.mat-mdc-card-content,mat-card-footer{
+  width:100%;
+  border-radius: 20px !important;
+
+}
+.card-title-container{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+
+  }
+  .mat-mdc-card, mdc-card{
+    background-color: #fff;
+  }
+
