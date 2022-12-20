@@ -11,3 +11,8 @@ npm install @fortawesome/free-brands-svg-icons
 npm install @fortawesome/free-regular-svg-icons
 npm install @fortawesome/free-solid-svg-icons
 npm install @fortawesome/angular-fontawesome
+npm install swiper
+https://swiperjs.com/angular
+npm install npm install resize-observer-polyfill --save-dev
+added "skipLibCheck": true dans tsconfig.json
+https://github.com/que-etc/resize-observer-polyfill/issues/80

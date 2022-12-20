@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +21,6 @@ body {
   color: #fff;
 }
 
-.component-height {
   @media (min-width: 320px) and (max-width: 576px) {
     .component {
       min-height: calc(100vh - 156px);
@@ -27,6 +30,8 @@ body {
   @media (min-width: 577px) {
     .component {
       min-height: calc(100vh - 100px);
+      border:2px solid red;
+
     }
   }
-}
+

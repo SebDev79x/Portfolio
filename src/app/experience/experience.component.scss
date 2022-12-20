@@ -1,0 +1,26 @@
+.experience {
+background-color: #263238;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.swiper{
+  background:white !important;
+height:400px;
+}
+.wrapper-swiper{
+  background:green !important;
+}
+.swiper-button-next, .swiper-button-prev{
+color:#263238;
+}
+.swiper-pagination-bullet-active{
+  background:#263238;
+}
+
+.wrapper-card{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}

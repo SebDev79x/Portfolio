@@ -9,14 +9,14 @@ import { CheckScreenSizeService } from './_services/check-screen-size.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  isSNCollapsed = false;
-  screenWidth = 0;
-  size = '';
-  width = 0;
-  isSmallDevice = false;
+  public isSNCollapsed = false;
+  public screenWidth = 0;
+  public size = '';
+  public width = 0;
+  public isSmallDevice = false;
 
-constructor(private checkScreenSize: CheckScreenSizeService){
- this.checkScreenSize.resize$.subscribe((data)=>{
+constructor(private css: CheckScreenSizeService){
+ this.css.resize$.subscribe((data)=>{
   this.size = data.size
   this.width= data.width
  }

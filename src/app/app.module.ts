@@ -24,6 +24,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
 import { TechnosComponent } from './technos/technos.component';
 import { TechnoCardComponent } from './techno-card/techno-card.component';
+import { SwiperModule } from 'swiper/angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { TechnoCardComponent } from './techno-card/techno-card.component';
     FontAwesomeModule,
     MatExpansionModule,
     MatChipsModule,
-    MatDividerModule
+    MatDividerModule,
+    SwiperModule
 
   ],
   providers: [],
