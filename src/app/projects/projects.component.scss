@@ -1,0 +1,46 @@
+img {
+  margin-top: 5px;
+  margin-left: 5px;
+  height: 150px;
+  width: 150px;
+}
+.projects {
+/*   border: 2px solid red;
+ */  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .title{
+  border: 2px solid red;
+} */
+.wrapper-flipcard {
+  display: flex;
+  justify-content: center;
+}
+.swiper-container {
+/*   border: 2px solid yellow;
+ */  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.swiper {
+
+  height: 500px;
+/*   border: 2px solid green;
+ */
+
+  /*   position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: red;
+}
+.swiper-pagination-bullet-active {
+  background: #263238;
+}

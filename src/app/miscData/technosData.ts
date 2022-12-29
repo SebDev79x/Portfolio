@@ -1,6 +1,6 @@
 /* Liste technologies utilisées */
 
-export const technos = [
+export const technosData = [
   {
     name: "Angular",
     icon: "",

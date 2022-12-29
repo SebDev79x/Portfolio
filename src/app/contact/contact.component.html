@@ -1,3 +1,11 @@
 <section class="contact component">
-  Contact
+
+        <div [ngStyle]="{'display': isLoading }" class="spinner">
+        </div>
+        <div *ngFor="let data of data">
+        <img src="{{data.url}}" alt="">
+        <div>{{data.title}}</div>
+      </div>
+
+
 </section>

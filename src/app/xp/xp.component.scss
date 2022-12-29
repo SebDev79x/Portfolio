@@ -1,13 +1,11 @@
 h1 {
   padding: 10px;
-/*   border: 2px solid red;
- */  text-align: center;
+text-align: center;
 }
-.portfolio {
+.xp {
   display: flex;
   flex-direction: column;
-/*   border: 2px solid yellow;
- */}
+}
 .grid-container {
   padding: 10px;
   display: grid;
@@ -16,8 +14,9 @@ h1 {
   "item1"
   "item2"
   "item3"
-  "item4";
-  border: 2px solid blue;
+  "item4"
+  "item5"
+  "item6";
   margin: auto auto;
   gap: 30px;
 }
@@ -43,43 +42,32 @@ mat-card-comment {
   padding: 10px;
 }
 mat-card-content {
-  /*   border:2px solid rgb(135, 188, 135);
- */
   padding: 10px;
 }
 mat-card-actions {
   padding: 10px;
 }
-img {
-  margin-top: 5px;
-  margin-left: 5px;
-  height: 150px;
-  width: 150px;
-  box-shadow: 5px 8px 5px 0px #eaeaea;
-}
+
 
 .item1 {
   grid-area: item1;
-  /*   border: 2px solid blue;
- */
 }
 .item2 {
   grid-area: item2;
-  /*   border: 2px solid red;
- */
 }
 .item3 {
   grid-area: item3;
-  /*   border: 2px solid yellow;
- */
 }
 .item4 {
   grid-area: item4;
-  /*   border: 2px solid pink;
- */
 }
-
-
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+/* MEDIA QUERIES */
 @media (min-width: 320px) and (max-width: 576px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -87,16 +75,15 @@ img {
       "item1"
       "item2"
       "item3"
-      "item4";
+      "item4"
+      "item5"
+      "item6";
   }
   @media (min-width: 769px) {
     .grid-container {
       justify-content: center;
     }
   }
-/*   .portfolio{
-    min-height: calc(100vh - 156px);
-  } */
 }
 
 @media (min-width: 577px) {

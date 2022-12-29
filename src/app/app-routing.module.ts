@@ -2,45 +2,41 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { XpComponent } from './xp/xp.component';
 import { PrivacyComponent } from './privacy/privacy.component';
-import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TechnosComponent } from './technos/technos.component';
-import { FlipcardComponent } from './flipcard/flipcard.component';
 
 const routes: Routes = [
   {
     path: '', redirectTo: 'home', pathMatch: 'full'
   },
   {
-    path: 'home', component: HomeComponent
+    path: 'home', component: HomeComponent,
   },
   {
-    path: 'experience', component: ExperienceComponent
+    path: 'projects', component:ProjectsComponent,
   },
   {
-    path: 'portfolio', component: PortfolioComponent
+    path: 'xp', component:XpComponent,
   },
   {
-    path: 'technos', component: TechnosComponent
+    path: 'technos', component: TechnosComponent,
   },
   {
-    path: 'contact', component: ContactComponent
+    path: 'contact', component: ContactComponent,
   },
   {
-    path: 'privacy', component: PrivacyComponent
+    path: 'privacy', component: PrivacyComponent,
   },
   {
-    path: 'flipcard', component:FlipcardComponent
-  },
-  {
-    path: '**', component: PageNotFoundComponent
+    path: '**', component: PageNotFoundComponent,
   }
 ];
-
+// {enableTracing:true} => will log all nav events that will be triggered when nav from route to another one
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,/* {enableTracing:true} */)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

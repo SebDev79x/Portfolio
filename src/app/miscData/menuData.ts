@@ -7,9 +7,9 @@ export const allMenuLinks:IMenu[] = [
   label:'Accueil'
 },
 {
-  link:'portfolio',
+  link:'xp',
   icon:'person',
-  label:'Portfolio'
+  label:'Expérience'
 },
 {
   link:'technos',
@@ -17,9 +17,9 @@ export const allMenuLinks:IMenu[] = [
   label:'Techs'
 },
 {
-  link:'experience',
+  link:'projects',
   icon:'description',
-  label:'Expérience'
+  label:'Projets'
 },
 {
   link:'contact',

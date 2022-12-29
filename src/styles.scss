@@ -20,22 +20,24 @@ body {
 .color-white {
   color: #fff;
 }
-
+.component-height{
   @media (min-width: 320px) and (max-width: 576px) {
+    // 156px = footer + toolbar et 50px = title
     .component {
-      min-height: calc(100vh - 156px);
+      min-height: calc(100vh - 206px);
     }
   }
 
   @media (min-width: 577px) {
+     // 100px = footer et 50px = title
     .component {
-      min-height: calc(100vh - 100px);
-      border:2px solid red;
-
+      min-height: calc(100vh - 150px);
     }
   }
+}
 
-  .mat-mdc-card-header, mat-mdc-card-header-text,.mat-mdc-card-content,mat-card-footer{
+
+/*   .mat-mdc-card-header, mat-mdc-card-header-text,.mat-mdc-card-content,mat-card-footer{
   width:100%;
   border-radius: 20px !important;
 
@@ -48,5 +50,5 @@ body {
   }
   .mat-mdc-card, mdc-card{
     background-color: #fff;
-  }
+  } */
 

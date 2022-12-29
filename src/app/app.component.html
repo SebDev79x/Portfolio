@@ -1,9 +1,9 @@
 <app-navbar *ngIf="size === 'xs'"></app-navbar>
 <app-sidenav *ngIf="size !== 'xs'" (onToggleSN)="onToggleSN($event)"></app-sidenav>
 <div >
-<!--   <div fxFlex="1 1 auto" DIV DU DESSUS class="flex-container" fxLayout="column">
- -->  <div fxFlex="1 1 auto">
-    <app-body [collapsed]="isSNCollapsed" [screenWidth]="screenWidth"></app-body>
+<div fxFlex="1 1 auto">
+    <app-body [collapsed]="isSNCollapsed" [screenWidth]="screenWidth">
+    </app-body>
   </div>
   <div>
     <app-footer></app-footer>

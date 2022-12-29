@@ -1,0 +1,22 @@
+<!-- <app-title [title]="'PROJECTS'"></app-title>
+ --><section class="projects component">
+  <div class="swiper-container">
+    <swiper [slidesPerView]="slidesPerView" [spaceBetween]="100" [navigation]="true" [pagination]="{ clickable: true }"
+    >
+    <!-- [centeredSlides]="true" [loop]="true" -->
+    <ng-template swiperSlide *ngFor="let project of projects" class="wrapper-flipcard">
+      <app-flipcard>
+        <flipcard-front>
+          <h2>{{project.id}}</h2>
+          <h2>{{project.title}}</h2>
+        </flipcard-front>
+        <flipcard-back>
+          <div>{{project.url}}</div>
+          <img [src]="project.imageUrl" alt="">
+          <div>{{project.comment}}</div>
+        </flipcard-back>
+      </app-flipcard>
+    </ng-template>
+  </swiper>
+  </div>
+</section>

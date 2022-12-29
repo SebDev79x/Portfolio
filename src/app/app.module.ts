@@ -13,19 +13,21 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { XpComponent } from './xp/xp.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatChipsModule } from '@angular/material/chips';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import { TechnosComponent } from './technos/technos.component';
 import { TechnoCardComponent } from './techno-card/techno-card.component';
 import { SwiperModule } from 'swiper/angular';
-import { FlipCardModule } from './flip-card/flip-card.module';
+import { FlipCardModule } from '../modules/flipcard.module';
+import { TitleModule } from '../modules/title.module';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,14 +36,14 @@ import { FlipCardModule } from './flip-card/flip-card.module';
     FooterComponent,
     HomeComponent,
     NavbarComponent,
-    PortfolioComponent,
+    XpComponent,
     PrivacyComponent,
     SidenavComponent,
-    ExperienceComponent,
+    ProjectsComponent,
     PageNotFoundComponent,
     TechnosComponent,
     TechnoCardComponent,
-  ],
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -56,7 +58,9 @@ import { FlipCardModule } from './flip-card/flip-card.module';
     MatChipsModule,
     MatDividerModule,
     SwiperModule,
-    FlipCardModule
+    FlipCardModule,
+    TitleModule,
+    HttpClientModule
 
   ],
   providers: [],

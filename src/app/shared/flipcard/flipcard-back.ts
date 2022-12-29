@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 @Component({
-  selector: 'flip-card-front',
-  templateUrl: `
-  <div class="flip-card-front">
+  selector: 'flipcard-back',
+  template: `
+  <div class="flipcard-back">
   <ng-content></ng-content>
   </div>
   `,
   styleUrls: ['./flipcard.component.scss'],
+
 })
-export class FlipCardFrontComponent{}
+export class FlipCardBackComponent{}

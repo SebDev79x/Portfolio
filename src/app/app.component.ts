@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IToggle } from './_interfaces/itoggle';
 import { CheckScreenSizeService } from './_services/check-screen-size.service';
@@ -9,6 +9,7 @@ import { CheckScreenSizeService } from './_services/check-screen-size.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   public isSNCollapsed = false;
   public screenWidth = 0;
   public size = '';

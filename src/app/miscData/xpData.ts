@@ -2,22 +2,24 @@
 /* Expérience et formations */
 
 export const xp = [
-    {
-      title: "Baccalauréat",
-      type:"diploma",
-      icon: "",
-      subtitle: "Sciences Economiques & Sociales",
-      details: {
-        from: "1997",
-        to: "",
-        name: "Lycée Jean Calvin",
-        location: "Noyon, 60"
-      },
-      validated: true
-    },
   {
+    id: 1,
+    title: "Baccalauréat",
+    type: "diploma",
+    icon: "",
+    subtitle: "Sciences Economiques & Sociales",
+    details: {
+      from: "1997",
+      to: "",
+      name: "Lycée Jean Calvin",
+      location: "Noyon, 60"
+    },
+    validated: true
+  },
+  {
+    id: 2,
     title: "B.T.S.",
-    type:"diploma",
+    type: "diploma",
     icon: "",
     subtitle: "Assistant de Gestion PME/PMI",
     details: {
@@ -29,8 +31,9 @@ export const xp = [
     validated: true
   },
   {
+    id: 3,
     title: "2xMoinsCher.com",
-    type:"job",
+    type: "job",
     icon: "",
     subtitle: "Chargé de Clientèle/Responsable Modération",
     details: {
@@ -42,8 +45,9 @@ export const xp = [
     validated: ""
   },
   {
+    id: 4,
     title: "Titre Professionnel",
-    type:"diploma",
+    type: "diploma",
     icon: "",
     subtitle: "Développeur Web & Web Mobile",
     details: {
@@ -55,8 +59,9 @@ export const xp = [
     validated: true
   },
   {
+    id: 5,
     title: "Certificat",
-    type:"diploma",
+    type: "diploma",
     icon: "",
     subtitle: "POEC React Native",
     details: {
@@ -68,8 +73,9 @@ export const xp = [
     validated: true
   },
   {
+    id: 6,
     title: "Education Nationale",
-    type:"job",
+    type: "job",
     icon: "",
     subtitle: "Assistant d'Education",
     details: {

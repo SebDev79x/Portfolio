@@ -1,0 +1,19 @@
+<div class="container">
+  <div [ngClass]="toggleProperty ? 'flipped' : ''" class="card">
+    <div class="front" (click)="toggle()">
+<ng-content select="flipcard-front"></ng-content>
+<div class="faArrowRightArrowLeft" >
+  <fa-icon [icon]="faArrowRightArrowLeft" class="icon"></fa-icon>
+</div>
+    </div>
+    <div class="back" (click)="toggle()">
+      <ng-content select="flipcard-back"></ng-content>
+      <div class="faArrowRightArrowLeft" >
+
+      <fa-icon [icon]="faArrowRightArrowLeft" class="icon"></fa-icon>
+
+    </div>
+  </div>
+</div>
+</div>
+

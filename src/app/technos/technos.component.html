@@ -1,19 +1,13 @@
-<section class="component">
-
-<div class="technos">
-  <div class="title">
-    <h1>Technos utilisées :</h1>
-  </div>
+<section class="technos component">
+<div class="">
   <div class="wrapper-listbox">
     <mat-chip-listbox  aria-label="Technologies et langages utilisés"
       *ngFor="let oneTechno of allTechnos" (click)="[onClickDisplayCard(oneTechno),onClickGetDataTechno(oneTechno)]">
       <mat-chip-option [ngClass]="oneTechno.selected ? 'chip' : ''" [selected]="oneTechno.selected">
         {{oneTechno.name}}
       </mat-chip-option>
-
     </mat-chip-listbox>
   </div>
-
 </div>
 <div class="cards">
   <div class="wrapper-cards">
