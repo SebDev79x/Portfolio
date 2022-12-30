@@ -1,7 +1,9 @@
-.component {
-  border: 2px solid blue;
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
 /* spinner */
 .spinner {
   border: 16px solid #263238;
@@ -15,6 +17,27 @@
   left: 50%;
   position: absolute;
 }
+img{
+  width: 80px;
+  height: 80px;
+}
+.jsonplaceholder-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+width:600px;
+border:1px solid black;
+}
+.title-container{
+/* border:2px solid green;
+ */
+}
+.image-container{
+/*   border:2px solid red;
+ */
+}
+/* KEYFRAMES spinner */
 @keyframes spin {
   0% {
     transform: rotate(0deg);

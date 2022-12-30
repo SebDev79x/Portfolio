@@ -13,11 +13,9 @@ export class BodyComponent implements OnInit {
 
   public currentRoute!: any;
 
-  constructor(private checkRoute: CheckRouteService) {
-  }
+  constructor(private checkRoute: CheckRouteService) {}
   ngOnInit(): void {
-    this.checkRoute.getCurrentRoute().subscribe((data: any) => {
-      console.log("data", data);
+    this.checkRoute.getUrl().subscribe((data: any) => {
       this.currentRoute = data.url.replace('/', '').toUpperCase()
     })
   }

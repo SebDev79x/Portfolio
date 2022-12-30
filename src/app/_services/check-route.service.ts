@@ -6,27 +6,12 @@ import { BehaviorSubject, filter, map } from 'rxjs';
 })
 
 export class CheckRouteService {
-  public currentRoute!: any;
-  public start!: any;
-  public end!: any;
-  public url!: any;
-  constructor(private router: Router) {
-
-  }
+  constructor(private router: Router) {}
   /** GET URL */
-  getCurrentRoute(): any {
+  getUrl(): any {
     return this.router.events
       .pipe(
         filter((e: Event): e is RouterEvent => e instanceof RouterEvent)
       )
   }
-  /** GET URL */
-
-  getNavigationStart = () => {
-    return this.router.events
-      .pipe(
-        filter((e): e is RouterEvent => e instanceof RouterEvent)
-      )
-  }
-
 }

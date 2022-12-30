@@ -1,11 +1,14 @@
 <section class="contact component">
-
-        <div [ngStyle]="{'display': isLoading }" class="spinner">
-        </div>
-        <div *ngFor="let data of data">
+  <div [ngStyle]="{'display': isLoading }" class="spinner">
+  </div>
+  <div *ngFor="let data of data" class="jsonplaceholder-container">
+      <div class="image-container">
         <img src="{{data.url}}" alt="">
-        <div>{{data.title}}</div>
       </div>
-
-
+      <div class="title-container">
+        {{data.title}}
+      </div>
+      <button mat-raised-button color="primary">+ d'infos</button>
+<!--       <mat-divider></mat-divider>
+ -->  </div>
 </section>

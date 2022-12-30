@@ -39,7 +39,7 @@ export const xp = [
     details: {
       from: "2007",
       to: "2012",
-      name: "La Manu",
+      name: "2xMoinsCher.com",
       location: "Paris 3ème arr."
     },
     validated: ""

@@ -1,6 +1,10 @@
 h1 {
   padding: 10px;
-text-align: center;
+  text-align: center;
+}
+.icon{
+  font-size: 20px;
+
 }
 .xp {
   display: flex;
@@ -11,28 +15,47 @@ text-align: center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-  "item1"
-  "item2"
-  "item3"
-  "item4"
-  "item5"
-  "item6";
+    "item1"
+    "item2"
+    "item3"
+    "item4"
+    "item5"
+    "item6";
   margin: auto auto;
   gap: 30px;
 }
 .matCardFirstBlock {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #263238;
+  color: #fff;
+  border-top-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+
 }
 .matCardSecondBlock {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: flex-end;
+  color: #263238;
+
+  border-radius: 20px !important;
+
 }
-mat-card {
+mat-panel-description, .matCardFirstBlock mat-card-content{
+  font-weight: bold;
+  font-size: 18px;
+}
+mat-panel-description{
+  color: #263238;
+
+}
+mat-expansion-panel{
   display: flex;
   flex-direction: column;
+  border-radius: 20px !important;
 }
 mat-card-title {
   font-size: 16px;
@@ -43,11 +66,18 @@ mat-card-comment {
 }
 mat-card-content {
   padding: 10px;
+  border-radius: 20px !important;
 }
 mat-card-actions {
   padding: 10px;
 }
-
+mat-card{
+  border-radius: 20px !important;
+}
+.span-mat-card-content {
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 .item1 {
   grid-area: item1;
@@ -67,6 +97,7 @@ mat-card-actions {
 .item6 {
   grid-area: item6;
 }
+
 /* MEDIA QUERIES */
 @media (min-width: 320px) and (max-width: 576px) {
   .grid-container {
@@ -87,10 +118,10 @@ mat-card-actions {
 }
 
 @media (min-width: 577px) {
- /*  .portfolio{
+  /*  .portfolio{
     min-height: calc(100vh - 100px);
   } */
-/*   .grid-item {
+  /*   .grid-item {
     height: 220px;
     width: 300px;
   }

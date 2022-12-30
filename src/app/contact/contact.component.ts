@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { BehaviorSubject, Observable, Subscription, pipe, filter, of } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -19,17 +18,26 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.getData()
   }
+  // NO SERVICE, ONLY FOR TESTING
+  // Get data from jsonplaceholder
   getData(): any {
     const url = 'https://jsonplaceholder.typicode.com/photos'
     this.http.get<any>(url).subscribe((response: any) => {
+
       if (response) {
         this.hideloader()
-        this.data = response
+        // Transform response in array
+        let result = Object.values(response)
+        // Filtered array to get only 100 items
+        this.data = result.filter((e: any, i: any) => {
+          return i > 4900
+        })
       }
     })
   }
+  // Hide loader
   hideloader() {
-    return this.isLoading = "none"
+    this.isLoading = "none"
   }
 
 }

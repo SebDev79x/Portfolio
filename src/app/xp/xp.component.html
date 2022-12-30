@@ -2,7 +2,6 @@
   <div class="grid-container">
     <div class="grid-item item{{xp.id}}" *ngFor="let xp of xpData">
       <mat-accordion class="example-headers-align" multi>
-        <!-- #enddocregion multi -->
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -12,7 +11,7 @@
               {{xp.title}}
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <mat-card class="bg-color-dark">
+          <mat-card>
             <div class="matCardFirstBlock">
               <mat-card-content>
                 {{xp.subtitle}}
@@ -20,10 +19,10 @@
             </div>
             <div class="matCardSecondBlock">
               <mat-card-content>
-                {{xp.details['from']}}
-                {{xp.details['to']}}
-                {{xp.details['location']}}
-                {{xp.details['name']}}
+                <p><span class="span-mat-card-content">Lieu</span> : {{xp.details['location']}}</p>
+               <p *ngIf="xp.type == 'job'"><span class="span-mat-card-content">Entreprise</span> : {{xp.details['name']}}</p>
+                <p *ngIf="xp.type == 'diploma'"><span class="span-mat-card-content">Etablissement</span> : {{xp.details['name']}}</p>
+                <p> <span class="span-mat-card-content">Période</span>  : {{xp.details['from']}}  <span *ngIf="xp.details['to']">/ {{xp.details['to']}}</span></p>
               </mat-card-content>
               <!--   <mat-card-actions>
                 <button class="moreInfos" mat-raised-button>+ d'infos</button>

@@ -28,6 +28,7 @@ import { SwiperModule } from 'swiper/angular';
 import { FlipCardModule } from '../modules/flipcard.module';
 import { TitleModule } from '../modules/title.module';
 import { HttpClientModule } from '@angular/common/http';
+import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent,
     TechnosComponent,
     TechnoCardComponent,
+    WorkInProgressComponent,
     ],
   imports: [
     BrowserModule,
