@@ -1,18 +1,31 @@
 <section class="technos component">
-<div class="">
-  <div class="wrapper-listbox">
+  <!-- <div class="wrapper-listbox">
     <mat-chip-listbox  aria-label="Technologies et langages utilisés"
-      *ngFor="let oneTechno of allTechnos" (click)="[onClickDisplayCard(oneTechno),onClickGetDataTechno(oneTechno)]">
-      <mat-chip-option [ngClass]="oneTechno.selected ? 'chip' : ''" [selected]="oneTechno.selected">
+      *ngFor="let oneTechno of allTechnos" (click)="[onClickDisplayCard(oneTechno)]">
+      <mat-chip-option [ngClass]="oneTechno.selected ? 'chip' : ''" [selected]="oneTechno.selected" class="chip{{oneTechno.id}}">
         {{oneTechno.name}}
       </mat-chip-option>
     </mat-chip-listbox>
   </div>
-</div>
-<div class="cards">
-  <div class="wrapper-cards">
-    <app-techno-card [isActive]="isSelected" [data]="dataTechno">
-    </app-techno-card>
+  <div class="cards">
+    <div class="wrapper-cards">
+      <app-techno-card [isActive]="isSelected" [data]="dataTechno">
+      </app-techno-card>
+    </div>
+  </div> -->
+  <div class="wrapper-listbox">
+    <div  aria-label="Technologies et langages utilisés"
+      *ngFor="let oneTechno of allTechnos" (click)="[onClickDisplayCard(oneTechno)]">
+      <button mat-raised-button [ngClass]="oneTechno.selected ? 'chip' : ''" selected="oneTechno.selected" class="chip{{oneTechno.id}} techno">
+        {{oneTechno.name}}
+      </button>
+    </div>
   </div>
-</div>
+  <div class="cards">
+    <div class="wrapper-cards">
+      <app-techno-card [isActive]="isSelected" [data]="dataTechno">
+      </app-techno-card>
+    </div>
+  </div>
 </section>
+

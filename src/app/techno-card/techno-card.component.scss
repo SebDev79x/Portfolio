@@ -1,19 +1,31 @@
 .icon{
-  font-size: 60px;
+  font-size: 40px;
 }
 .wrapper-card{
-  background-color: #eaebeb;
-  border:2px solid blue;
-  margin: 50px;
-  padding:50px;
+
+  background-color: #263238;
+/*   border:2px solid red;//#263238;
+ */  margin: 10px;
+  padding:10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+/*  width:300px;
+ height:300px; */
 }
-.mat-card{
+
+/* .mat-card-header, .mat-card-content{
   background-color: #263238;
+} */
+.example-card {
+  width:280px;
+ height:200px;
+ background-color: #fff;
 }
-.mat-card-header, .mat-card-content{
-  background-color: #263238;
+mat-card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

@@ -1,9 +1,9 @@
-
-.cards{
+.cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 .wrapper-listbox {
   display: flex;
@@ -13,13 +13,62 @@
 }
 .chip {
   background-color: #263238 !important;
+  color: #fff !important;
+  //#263238
 }
-
+.techno {
+  margin: 10px 0 !important;
+  cursor: pointer;
+  text-align: center;
+  width: 100px;
+}
+.chip1 {
+  grid: "chip1";
+}
+.chip2 {
+  grid: "chip2";
+}
+.chip3 {
+  grid: "chip3";
+}
+.chip4 {
+  grid: "chip4";
+}
+.chip5 {
+  grid: "chip5";
+}
+.chip6 {
+  grid: "chip6";
+}
+.chip7 {
+  grid: "chip7";
+}
+.chip8 {
+  grid: "chip8";
+}
+.wrapper-listbox {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* MEDIA QUERIES */
 @media screen and (min-width: 320px) and (max-width: 576px) {
   .wrapper-listbox {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "chip1 chip2"
+      "chip3 chip4"
+      "chip5 chip6"
+      "chip7 chip8";
+  }
+}
+@media screen and (min-width: 577px) {
+  .wrapper-listbox {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "chip1 chip2 chip3 chip4"
+      "chip5 chip6 chip7 chip8";
   }
 }

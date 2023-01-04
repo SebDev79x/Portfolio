@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { technosData } from '../miscData/technosData';
 import { faAngular, faNodeJs, faHtml5, faCss3, faJsSquare, faPhp, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+
+import { ITechno } from '../_interfaces/itechno';
 @Component({
   selector: 'app-technos',
   templateUrl: './technos.component.html',
@@ -11,14 +14,14 @@ import { faAngular, faNodeJs, faHtml5, faCss3, faJsSquare, faPhp, faReact } from
 })
 
 export class TechnosComponent implements OnInit {
-  @Input() title!:string;
+  @Input() title!: string;
   public isActive!: boolean;
   public technos = technosData;
   public allTechnos!: any;
-  public icons = [faAngular, faNodeJs, faHtml5, faCss3, faJsSquare, faPhp, faReact];
+  public icons = [faAngular, faNodeJs, faHtml5, faCss3, faJsSquare, faPhp, faReact,faDatabase];
   public isSelected: boolean = false;
-  public dataTechno!: {};
-  public chip!:string;
+  public dataTechno!: any;
+  public chip!: string;
   constructor() { }
   ngOnInit(): void {
     this.addPropIconNames(this.technos, this.icons, 'icon')
@@ -33,24 +36,28 @@ export class TechnosComponent implements OnInit {
   onClickDisplayCard = (techno: any) => {
     techno.selected = !techno.selected
     this.isSelected = true
-    this.chip = 'red';
+    // Chaque élément non sélectionné est false
     this.allTechnos.map((element: any) => {
       if (element != techno) {
         element.selected = false
       }
     })
-    const noSelectedChip = this.allTechnos.filter((element: any) => {
+    // Filtre this.allTechnos => renvoie la techno qui n'est pas false
+    const selectedChip = this.allTechnos.filter((element: any) => {
       return element.selected != false
     })
-    if (noSelectedChip.length == 0) {
+    // Si tableau this.allTechnos est vide, isSelected est false
+    if (selectedChip.length == 0) {
       this.isSelected = false
     }
+    this.onClickGetDataTechno(techno)
   }
 
   /** Récupère détails d'une techno au clic */
-  onClickGetDataTechno = (data: object) => {
-    this.dataTechno = data
-    console.log("this.dataTechno ",this.dataTechno );
+  onClickGetDataTechno = (techno: ITechno) => {
+ this.dataTechno = techno
 
+
+ return this.dataTechno
   }
 }
